@@ -1,4 +1,5 @@
 import { Facebook, Instagram, MapPin, Mail, ExternalLink } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,21 +11,19 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-primary-foreground/10 rounded-lg flex items-center justify-center">
-                <span className="font-extrabold text-xl text-accent">F</span>
-              </div>
+              <img src={logo} alt="Founders Toastmasters Club Logo" className="w-12 h-12 rounded-full" />
               <div>
                 <p className="font-bold text-lg">Founders Toastmasters Club</p>
                 <p className="text-sm text-primary-foreground/70">Where Leaders Are Made</p>
               </div>
             </div>
             <p className="text-primary-foreground/70 text-sm max-w-md mb-6">
-              A member of Toastmasters International, District 41, Division D, Area D3. 
+              A member of Toastmasters International, District 41, Division D, Area C1. 
               Building confident communicators and leaders in Kathmandu, Nepal.
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.facebook.com/founderstmc"
+                href="https://www.facebook.com/FoundersToastmastersClub"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"
@@ -33,7 +32,7 @@ export const Footer = () => {
                 <Facebook size={18} />
               </a>
               <a
-                href="https://www.instagram.com/founderstmc"
+                href="https://www.instagram.com/founderstoastmastersclub"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"
@@ -82,15 +81,15 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-primary-foreground/70">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />
-                <span>Carnival Restro, Anamnagar, Kathmandu</span>
+                <span>Rooster Logic Pvt. Ltd., Gairidhara, Naxal</span>
               </li>
               <li>
                 <a 
-                  href="mailto:mina.tamang0021@gmail.com"
+                  href="mailto:founderstoastmastersclub@gmail.com"
                   className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                 >
                   <Mail size={16} />
-                  mina.tamang0021@gmail.com
+                  founderstoastmastersclub@gmail.com
                 </a>
               </li>
               <li>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -20,9 +21,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-hero rounded-lg flex items-center justify-center shadow-soft">
-              <span className="text-primary-foreground font-extrabold text-lg md:text-xl">F</span>
-            </div>
+            <img src={logo} alt="Founders Toastmasters Club Logo" className="w-10 h-10 md:w-12 md:h-12 rounded-full" />
             <div className="hidden sm:block">
               <p className="font-bold text-foreground text-sm md:text-base leading-tight">Founders</p>
               <p className="text-xs text-muted-foreground leading-tight">Toastmasters Club</p>

@@ -6,8 +6,8 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Carnival Restro and Meeting",
-    subvalue: "Anamnagar, Kathmandu, Nepal",
+    value: "Rooster Logic Pvt. Ltd.",
+    subvalue: "Gairidhara, Naxal, Kathmandu, Nepal",
   },
   {
     icon: Calendar,
@@ -18,13 +18,13 @@ const contactInfo = [
   {
     icon: Clock,
     label: "Time",
-    value: "6:00 PM - 7:30 PM",
+    value: "6:00 PM - 7:40 PM",
     subvalue: "Doors open 15 minutes early",
   },
   {
     icon: Mail,
     label: "Contact",
-    value: "mina.tamang0021@gmail.com",
+    value: "founderstoastmastersclub@gmail.com",
     subvalue: "Reach out for inquiries",
   },
 ];
@@ -33,13 +33,13 @@ const socialLinks = [
   {
     icon: Facebook,
     label: "Facebook",
-    href: "https://www.facebook.com/founderstmc",
+    href: "https://www.facebook.com/FoundersToastmastersClub",
     color: "bg-[#1877F2]",
   },
   {
     icon: Instagram,
     label: "Instagram",
-    href: "https://www.instagram.com/founderstmc",
+    href: "https://www.instagram.com/founderstoastmastersclub",
     color: "bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF]",
   },
 ];
@@ -150,7 +150,7 @@ export const Contact = () => {
               </div>
 
               <Button variant="hero" size="xl" className="w-full" asChild>
-                <a href="mailto:mina.tamang0021@gmail.com?subject=Guest Visit Inquiry - Founders Toastmasters Club">
+                <a href="mailto:founderstoastmastersclub@gmail.com?subject=Guest Visit Inquiry - Founders Toastmasters Club">
                   <Mail size={20} className="mr-2" />
                   Contact to Visit
                 </a>

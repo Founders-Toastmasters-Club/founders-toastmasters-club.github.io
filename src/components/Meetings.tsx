@@ -8,25 +8,21 @@ const meetingParts = [
     icon: Mic,
     title: "Prepared Speeches",
     description: "Members deliver speeches from the Pathways curriculum, working on specific skills.",
-    duration: "5-7 min each",
   },
   {
     icon: MessageCircle,
     title: "Table Topics",
     description: "Impromptu speaking session where members respond to surprise questions on the spot.",
-    duration: "1-2 min each",
   },
   {
     icon: ThumbsUp,
     title: "Evaluations",
     description: "Constructive feedback from fellow members to help speakers improve their skills.",
-    duration: "2-3 min each",
   },
   {
     icon: Award,
     title: "Awards",
     description: "Recognition for best speaker, evaluator, and table topics participant of the day.",
-    duration: "End of meeting",
   },
 ];
 
@@ -80,7 +76,7 @@ export const Meetings = () => {
               <div className="bg-primary text-primary-foreground p-5 rounded-xl">
                 <Clock size={24} className="mb-2" />
                 <p className="font-bold text-lg">Every Wednesday</p>
-                <p className="opacity-80 text-sm">6:00 PM - 7:30 PM</p>
+                <p className="opacity-80 text-sm">6:00 PM - 7:40 PM</p>
               </div>
             </div>
             <div className="space-y-4 pt-8">
@@ -119,12 +115,7 @@ export const Meetings = () => {
                     <part.icon className="text-primary-foreground" size={20} />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center justify-between mb-1">
-                      <h4 className="font-semibold text-foreground">{part.title}</h4>
-                      <span className="text-xs text-muted-foreground bg-background px-2 py-1 rounded">
-                        {part.duration}
-                      </span>
-                    </div>
+                    <h4 className="font-semibold text-foreground mb-1">{part.title}</h4>
                     <p className="text-sm text-muted-foreground">{part.description}</p>
                   </div>
                 </motion.div>
