@@ -1,112 +1,250 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
+import {
+  ArrowRight,
+  MapPin,
+  Calendar,
+  Users,
+  Mic,
+  Trophy,
+  Heart,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-speaking.jpg";
 
 export const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Toastmasters speaking event"
-          className="w-full h-full object-cover"
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100"
+    >
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-hero-overlay" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container-wide pt-20">
-        <div className="max-w-3xl">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent border border-accent/30 text-sm font-medium mb-6">
-              <MapPin size={16} />
-              Kathmandu, Nepal • District 41
-            </span>
+            <div className="space-y-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm border border-accent/20"
+              >
+                <MapPin size={16} />
+                Kathmandu, Nepal • District 41
+              </motion.div>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-5xl lg:text-6xl font-bold text-foreground leading-tight"
+              >
+                Craft Your Voice,
+                <br />
+                <span className="text-accent">Shape Your Future</span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-xl text-muted-foreground max-w-lg leading-relaxed"
+              >
+                Join Nepal's premier Toastmasters club where passionate
+                individuals transform into confident leaders through the art of
+                communication.
+              </motion.p>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <a href="#contact" className="flex items-center gap-2">
+                  Join Our Community
+                  <ArrowRight size={18} />
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-2 hover:bg-accent/5 transition-all duration-300"
+              >
+                <a href="#about">Discover More</a>
+              </Button>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="grid grid-cols-3 gap-6 pt-8"
+            >
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">15+</div>
+                <div className="text-sm text-muted-foreground">
+                  Active Members
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">5+</div>
+                <div className="text-sm text-muted-foreground">
+                  Years Strong
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">200+</div>
+                <div className="text-sm text-muted-foreground">
+                  Meeting Completed
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6"
-          >
-            Where Leaders
-            <br />
-            <span className="text-accent">Are Made</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8"
-          >
-            Join Founders Toastmasters Club and transform your communication skills, 
-            build confidence, and develop leadership abilities in a supportive community.
-          </motion.p>
-
+          {/* Right Content - Visual */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 mb-12"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
           >
-            <Button variant="hero" size="xl" asChild>
-              <a href="#contact">
-                Visit as a Guest
-                <ArrowRight size={20} className="ml-2" />
-              </a>
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <a href="#about">Learn More</a>
-            </Button>
-          </motion.div>
+            <div className="relative">
+              {/* Floating Cards */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -top-8 -left-8 bg-white rounded-2xl p-4 shadow-card border z-10"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <Mic className="text-accent" size={20} />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-sm">Public Speaking</div>
+                    <div className="text-xs text-muted-foreground">
+                      Master the art
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-6 sm:gap-8"
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-primary-foreground/10 backdrop-blur flex items-center justify-center">
-                <Calendar className="text-accent" size={22} />
-              </div>
-              <div>
-                <p className="text-primary-foreground font-semibold">Every Wednesday</p>
-                <p className="text-primary-foreground/70 text-sm">6:00 PM - 7:30 PM</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-primary-foreground/10 backdrop-blur flex items-center justify-center">
-                <MapPin className="text-accent" size={22} />
-              </div>
-              <div>
-                <p className="text-primary-foreground font-semibold">Carnival Restro</p>
-                <p className="text-primary-foreground/70 text-sm">Anamnagar, Kathmandu</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-primary-foreground/10 backdrop-blur flex items-center justify-center">
-                <Users className="text-accent" size={22} />
-              </div>
-              <div>
-                <p className="text-primary-foreground font-semibold">Division D, Area D3</p>
-                <p className="text-primary-foreground/70 text-sm">District 41</p>
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1,
+                }}
+                className="absolute -bottom-8 -right-8 bg-white rounded-2xl p-4 shadow-card border z-10"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <Trophy className="text-accent" size={20} />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-sm">Leadership</div>
+                    <div className="text-xs text-muted-foreground">
+                      Lead with confidence
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Main Image */}
+              <div className="relative bg-white rounded-3xl p-8 shadow-elevated border overflow-hidden">
+                <img
+                  src={heroImage}
+                  alt="Toastmasters speaking event"
+                  className="w-full h-80 object-cover rounded-2xl"
+                />
+                <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur rounded-xl p-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                      <Heart className="text-white" size={24} />
+                    </div>
+                    <div>
+                      <div className="font-semibold">Founders Toastmasters</div>
+                      <div className="text-sm text-muted-foreground">
+                        Building leaders since 2019
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
         </div>
-      </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+        {/* Meeting Info */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-16 bg-white rounded-2xl p-8 shadow-card border"
+        >
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
+                <Calendar className="text-accent" size={24} />
+              </div>
+              <div className="text-left">
+                <p className="font-semibold text-foreground">Every Wednesday</p>
+                <p className="text-muted-foreground text-sm">
+                  6:00 PM - 7:30 PM
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
+                <MapPin className="text-accent" size={24} />
+              </div>
+              <div className="text-left">
+                <p className="font-semibold text-foreground">Carnival Restro</p>
+                <p className="text-muted-foreground text-sm">
+                  Anamnagar, Kathmandu
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
+                <Users className="text-accent" size={24} />
+              </div>
+              <div className="text-left">
+                <p className="font-semibold text-foreground">
+                  Division C, Area C1
+                </p>
+                <p className="text-muted-foreground text-sm">District 41</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 };

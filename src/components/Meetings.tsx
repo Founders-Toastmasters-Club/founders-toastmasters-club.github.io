@@ -1,125 +1,245 @@
 import { motion } from "framer-motion";
-import { Mic, MessageCircle, ThumbsUp, Clock, Award, Users } from "lucide-react";
+import {
+  Mic,
+  MessageCircle,
+  ThumbsUp,
+  Clock,
+  Award,
+  Users,
+  Zap,
+  Target,
+  Lightbulb,
+} from "lucide-react";
 import tableTopicsImage from "@/assets/table-topics.jpg";
 import evaluationImage from "@/assets/evaluation.jpg";
 
-const meetingParts = [
+const meetingFlow = [
   {
-    icon: Mic,
+    time: "6:10 PM",
+    title: "Welcome & Business",
+    description: "Meeting opens with announcements and role assignments",
+    icon: Users,
+    color: "bg-blue-50 text-blue-600",
+  },
+  {
+    time: "6:25 PM",
     title: "Prepared Speeches",
-    description: "Members deliver speeches from the Pathways curriculum, working on specific skills.",
+    description: "Members deliver planned speeches from Pathways curriculum",
+    icon: Mic,
+    color: "bg-green-50 text-green-600",
   },
   {
-    icon: MessageCircle,
+    time: "6:45 PM",
     title: "Table Topics",
-    description: "Impromptu speaking session where members respond to surprise questions on the spot.",
+    description: "Impromptu speaking - respond to surprise questions",
+    icon: Zap,
+    color: "bg-yellow-50 text-yellow-600",
   },
   {
-    icon: ThumbsUp,
+    time: "7:00 PM",
     title: "Evaluations",
-    description: "Constructive feedback from fellow members to help speakers improve their skills.",
+    description: "Constructive feedback to help speakers improve",
+    icon: ThumbsUp,
+    color: "bg-purple-50 text-purple-600",
   },
   {
+    time: "7:20 PM",
+    title: "Awards & Close",
+    description: "Recognition and meeting wrap-up",
     icon: Award,
-    title: "Awards",
-    description: "Recognition for best speaker, evaluator, and table topics participant of the day.",
+    color: "bg-pink-50 text-pink-600",
   },
 ];
 
 const benefits = [
-  "Build confidence in public speaking",
-  "Develop leadership and communication skills",
-  "Network with professionals from diverse fields",
-  "Receive constructive feedback in a safe space",
-  "Progress through structured learning paths",
-  "Participate in speech contests and events",
+  {
+    icon: Target,
+    title: "Skill Development",
+    desc: "Master public speaking through structured learning paths",
+  },
+  {
+    icon: Lightbulb,
+    title: "Confidence Building",
+    desc: "Overcome fear and speak with authority in any situation",
+  },
+  {
+    icon: Users,
+    title: "Networking",
+    desc: "Connect with professionals from diverse industries",
+  },
+  {
+    icon: Award,
+    title: "Recognition",
+    desc: "Earn certifications and compete in speech contests",
+  },
 ];
 
 export const Meetings = () => {
   return (
-    <section id="meetings" className="section-padding bg-background">
+    <section
+      id="meetings"
+      className="py-24 bg-gradient-to-b from-gray-50 to-white"
+    >
       <div className="container-wide">
-        {/* Section Header */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-semibold mb-4">
-            Our Meetings
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            What Happens at a Meeting?
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-4">
+            <Clock size={16} />
+            Weekly Meetings
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Experience the
+            <br />
+            <span className="text-accent">Toastmasters Magic</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Every Wednesday, we gather for an engaging 90-minute session filled with speaking 
-            opportunities, learning, and growth. Here's what to expect as a guest.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Join us every Wednesday for an engaging 90-minute session where
+            learning meets fun, and every member gets a chance to shine.
           </p>
         </motion.div>
 
-        {/* Meeting Details */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
-          {/* Images */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
-          >
-            <div className="space-y-4">
-              <img
-                src={tableTopicsImage}
-                alt="Table Topics session"
-                className="w-full h-auto rounded-xl shadow-card object-cover"
-              />
-              <div className="bg-primary text-primary-foreground p-5 rounded-xl">
-                <Clock size={24} className="mb-2" />
-                <p className="font-bold text-lg">Every Wednesday</p>
-                <p className="opacity-80 text-sm">6:00 PM - 7:40 PM</p>
-              </div>
-            </div>
-            <div className="space-y-4 pt-8">
-              <div className="bg-secondary text-secondary-foreground p-5 rounded-xl">
-                <Users size={24} className="mb-2" />
-                <p className="font-bold text-lg">Guests Welcome</p>
-                <p className="opacity-80 text-sm">No prior experience needed</p>
-              </div>
-              <img
-                src={evaluationImage}
-                alt="Evaluation session"
-                className="w-full h-auto rounded-xl shadow-card object-cover"
-              />
-            </div>
-          </motion.div>
+        {/* Meeting Timeline */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20"
+        >
+          <h3 className="text-3xl font-bold text-center text-foreground mb-12">
+            A Typical Meeting Flow
+          </h3>
+          <div className="relative max-w-4xl mx-auto">
+            {/* Timeline line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-accent to-accent/50"></div>
 
-          {/* Meeting Parts */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <h3 className="text-2xl font-bold text-foreground mb-6">Meeting Structure</h3>
-            <div className="space-y-4">
-              {meetingParts.map((part, index) => (
+            <div className="space-y-8">
+              {meetingFlow.map((item, index) => (
                 <motion.div
-                  key={part.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  key={item.time}
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.1 * index }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors"
+                  transition={{ duration: 0.6, delay: 0.1 * index }}
+                  className="relative flex items-center gap-6"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-hero flex items-center justify-center flex-shrink-0">
-                    <part.icon className="text-primary-foreground" size={20} />
+                  {/* Time circle */}
+                  <div className="relative z-10 flex-shrink-0">
+                    <div
+                      className={`w-16 h-16 rounded-full ${item.color} flex items-center justify-center shadow-lg`}
+                    >
+                      <item.icon size={24} />
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-foreground mb-1">{part.title}</h4>
-                    <p className="text-sm text-muted-foreground">{part.description}</p>
+
+                  {/* Content */}
+                  <div className="bg-white rounded-2xl p-6 shadow-card border border-gray-100 flex-1 hover:shadow-elevated transition-shadow duration-300">
+                    <div className="flex items-center gap-4 mb-2">
+                      <span className="font-bold text-accent text-lg">
+                        {item.time}
+                      </span>
+                      <h4 className="font-semibold text-foreground text-xl">
+                        {item.title}
+                      </h4>
+                    </div>
+                    <p className="text-muted-foreground">{item.description}</p>
                   </div>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Visual Section */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Images */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="grid grid-cols-2 gap-6">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+                className="space-y-4"
+              >
+                <img
+                  src={tableTopicsImage}
+                  alt="Table Topics session"
+                  className="w-full h-48 object-cover rounded-2xl shadow-card"
+                />
+                <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-2xl">
+                  <Zap size={24} className="mb-2" />
+                  <p className="font-bold text-lg">Table Topics</p>
+                  <p className="text-sm opacity-90">Think on your feet!</p>
+                </div>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+                className="space-y-4 pt-12"
+              >
+                <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-2xl">
+                  <Mic size={24} className="mb-2" />
+                  <p className="font-bold text-lg">Prepared Speeches</p>
+                  <p className="text-sm opacity-90">Showcase your skills</p>
+                </div>
+                <img
+                  src={evaluationImage}
+                  alt="Evaluation session"
+                  className="w-full h-48 object-cover rounded-2xl shadow-card"
+                />
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Meeting Info */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-8"
+          >
+            <div>
+              <h3 className="text-3xl font-bold text-foreground mb-4">
+                Why Our Meetings Work
+              </h3>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Our structured yet flexible format ensures everyone participates
+                while learning at their own pace. From seasoned speakers to
+                nervous beginners, every voice matters.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-white rounded-2xl p-6 shadow-soft border border-gray-100">
+                <Clock className="text-accent mb-3" size={32} />
+                <h4 className="font-semibold text-foreground mb-1">
+                  90 Minutes
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  Efficient, engaging sessions
+                </p>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-soft border border-gray-100">
+                <Users className="text-accent mb-3" size={32} />
+                <h4 className="font-semibold text-foreground mb-1">
+                  All Welcome
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  No experience required
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -129,27 +249,32 @@ export const Meetings = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-hero rounded-2xl p-8 md:p-12 text-primary-foreground"
+          transition={{ duration: 0.6 }}
         >
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Benefits of Joining
-            </h3>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.05 * index }}
-                  className="flex items-center gap-3 bg-primary-foreground/10 backdrop-blur rounded-lg p-4"
-                >
-                  <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
-                  <span className="text-sm font-medium">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
+          <h3 className="text-3xl font-bold text-center text-foreground mb-12">
+            Transform Your Life
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 * index }}
+                className="group bg-white rounded-2xl p-6 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+              >
+                <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors duration-300">
+                  <benefit.icon className="text-accent" size={28} />
+                </div>
+                <h4 className="font-semibold text-foreground mb-2 text-lg">
+                  {benefit.title}
+                </h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {benefit.desc}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>

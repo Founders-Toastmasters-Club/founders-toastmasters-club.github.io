@@ -1,5 +1,15 @@
 import { motion } from "framer-motion";
-import { MapPin, Calendar, Clock, Mail, Facebook, Instagram, ExternalLink } from "lucide-react";
+import {
+  MapPin,
+  Calendar,
+  Clock,
+  Mail,
+  Facebook,
+  Instagram,
+  ExternalLink,
+  Send,
+  Phone,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const contactInfo = [
@@ -7,25 +17,29 @@ const contactInfo = [
     icon: MapPin,
     label: "Location",
     value: "Rooster Logic Pvt. Ltd.",
-    subvalue: "Gairidhara, Naxal, Kathmandu, Nepal",
+    subvalue: "Gairidhara, Naxal, Kathmandu",
+    color: "bg-red-50 text-red-600",
   },
   {
     icon: Calendar,
     label: "Meeting Day",
     value: "Every Wednesday",
-    subvalue: "Weekly meetings throughout the year",
+    subvalue: "Consistent weekly schedule",
+    color: "bg-blue-50 text-blue-600",
   },
   {
     icon: Clock,
     label: "Time",
     value: "6:00 PM - 7:40 PM",
-    subvalue: "Doors open 15 minutes early",
+    subvalue: "90 minutes of inspiration",
+    color: "bg-green-50 text-green-600",
   },
   {
     icon: Mail,
-    label: "Contact",
+    label: "Email",
     value: "founderstoastmastersclub@gmail.com",
-    subvalue: "Reach out for inquiries",
+    subvalue: "Drop us a message anytime",
+    color: "bg-purple-50 text-purple-600",
   },
 ];
 
@@ -34,130 +48,171 @@ const socialLinks = [
     icon: Facebook,
     label: "Facebook",
     href: "https://www.facebook.com/FoundersToastmastersClub",
-    color: "bg-[#1877F2]",
+    color: "hover:bg-[#1877F2] hover:text-white",
   },
   {
     icon: Instagram,
     label: "Instagram",
     href: "https://www.instagram.com/founderstoastmastersclub",
-    color: "bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF]",
+    color:
+      "hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] hover:text-white",
   },
 ];
 
 export const Contact = () => {
   return (
-    <section id="contact" className="section-padding bg-background">
+    <section
+      id="contact"
+      className="py-24 bg-gradient-to-b from-gray-50 to-white"
+    >
       <div className="container-wide">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-4">
+            <Send size={16} />
+            Join Our Community
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Your Journey
+            <br />
+            <span className="text-accent">Starts Here</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Ready to transform your communication skills? Visit us as a guest
+            and discover the power of Toastmasters in a supportive, welcoming
+            environment.
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-semibold mb-4">
-              Get In Touch
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Visit Us as a Guest
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Ready to take the first step towards better communication and leadership? 
-              We welcome guests at every meeting. Come see what Toastmasters is all about – 
-              no obligation, just inspiration.
-            </p>
+            <div>
+              <h3 className="text-3xl font-bold text-foreground mb-6">
+                Find Us & Connect
+              </h3>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Located in the heart of Kathmandu, our meetings bring together
+                professionals from all walks of life. Whether you're a complete
+                beginner or looking to refine your skills, you'll find a
+                welcoming community here.
+              </p>
+            </div>
 
-            <div className="space-y-4 mb-8">
+            <div className="grid gap-4">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={info.label}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.1 * index }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
+                  transition={{ duration: 0.4, delay: 0.1 * index }}
+                  className="bg-white rounded-2xl p-6 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 border border-gray-100"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-hero flex items-center justify-center flex-shrink-0">
-                    <info.icon className="text-primary-foreground" size={20} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-1">{info.label}</p>
-                    <p className="font-semibold text-foreground">{info.value}</p>
-                    <p className="text-sm text-muted-foreground">{info.subvalue}</p>
+                  <div className="flex items-start gap-4">
+                    <div
+                      className={`w-14 h-14 rounded-xl ${info.color} flex items-center justify-center flex-shrink-0`}
+                    >
+                      <info.icon size={24} />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm text-muted-foreground font-medium mb-1">
+                        {info.label}
+                      </p>
+                      <p className="font-semibold text-foreground text-lg">
+                        {info.value}
+                      </p>
+                      <p className="text-muted-foreground text-sm">
+                        {info.subvalue}
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
               ))}
             </div>
-
-            {/* Social Links */}
-            <div>
-              <p className="font-semibold text-foreground mb-4">Follow Us</p>
-              <div className="flex gap-3">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${social.color} text-white p-3 rounded-xl hover:opacity-90 transition-opacity flex items-center gap-2`}
-                  >
-                    <social.icon size={20} />
-                    <span className="font-medium">{social.label}</span>
-                    <ExternalLink size={16} />
-                  </a>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
-          {/* CTA Card */}
+          {/* CTA Section */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-8"
           >
-            <div className="bg-gradient-hero rounded-2xl p-8 md:p-10 text-primary-foreground h-full flex flex-col justify-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                Ready to Begin Your Journey?
-              </h3>
-              <p className="text-primary-foreground/80 mb-8">
-                Whether you want to conquer your fear of public speaking, advance in your career, 
-                or simply connect with inspiring people, Founders Toastmasters Club is here to 
-                support your growth.
-              </p>
-
-              <div className="bg-primary-foreground/10 backdrop-blur rounded-xl p-6 mb-8">
-                <h4 className="font-bold text-lg mb-3">What to Expect as a Guest:</h4>
-                <ul className="space-y-2 text-sm text-primary-foreground/90">
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                    A warm welcome from our members
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                    Observe a full Toastmasters meeting
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                    Optional participation in Table Topics
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                    No pressure – just come and experience
-                  </li>
-                </ul>
+            {/* Guest Experience */}
+            <div className="bg-gradient-to-br from-accent/5 to-accent/10 rounded-3xl p-8 border border-accent/20">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                  <Phone className="text-white" size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">
+                  Guest Experience
+                </h3>
               </div>
 
-              <Button variant="hero" size="xl" className="w-full" asChild>
-                <a href="mailto:founderstoastmastersclub@gmail.com?subject=Guest Visit Inquiry - Founders Toastmasters Club">
-                  <Mail size={20} className="mr-2" />
-                  Contact to Visit
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                As a guest, you'll observe a complete Toastmasters meeting and
+                have the option to participate. No preparation needed - just
+                bring your enthusiasm!
+              </p>
+
+              <div className="space-y-3 mb-8">
+                {[
+                  "Warm welcome from our members",
+                  "Observe prepared speeches and evaluations",
+                  "Optional Table Topics participation",
+                  "Networking with like-minded professionals",
+                  "Free - no commitment required",
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
+                    <span className="text-foreground">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Button className="w-full bg-accent hover:bg-accent/90 text-white py-4 text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+                <Mail size={20} className="mr-2" />
+                <a
+                  href="mailto:founderstoastmastersclub@gmail.com?subject=Guest Visit Inquiry"
+                  className="inline-block text-sm"
+                >
+                  Email to Visit as Guest
                 </a>
               </Button>
+            </div>
 
-              <p className="text-center text-sm text-primary-foreground/60 mt-4">
-                Or simply show up at our next meeting – guests are always welcome!
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white rounded-2xl p-6 shadow-soft border border-gray-100 text-center">
+                <div className="text-3xl font-bold text-accent mb-1">0</div>
+                <div className="text-sm text-muted-foreground">
+                  Fee to Visit
+                </div>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-soft border border-gray-100 text-center">
+                <div className="text-3xl font-bold text-accent mb-1">90</div>
+                <div className="text-sm text-muted-foreground">Minutes</div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <p className="text-muted-foreground">
+                <span className="font-medium">Pro tip:</span> Just show up!
+                Guests are always welcome at our meetings.
               </p>
             </div>
           </motion.div>
