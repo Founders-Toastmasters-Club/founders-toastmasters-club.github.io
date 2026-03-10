@@ -31,43 +31,43 @@ export const Header = () => {
         ? 'bg-white/90 backdrop-blur-xl shadow-card border-b border-gray-200/50' 
         : 'bg-white/50 backdrop-blur-lg'
     }`}>
-      <div className="container-wide">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <div className="container-wide px-2 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-18 lg:h-20 px-1 sm:px-0">
           {/* Logo */}
           <motion.a 
             href="#home" 
-            className="flex items-center gap-3 group"
-            whileHover={{ scale: 1.05 }}
+            className="flex items-center gap-2 sm:gap-3 group"
+            whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
             <div className="relative">
               <img 
                 src={logo} 
                 alt="Founders Toastmasters Club Logo" 
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full ring-2 ring-accent/20 group-hover:ring-accent/40 transition-all duration-300" 
+                className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-full ring-2 ring-accent/20 group-hover:ring-accent/40 transition-all duration-300" 
               />
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-accent rounded-full flex items-center justify-center">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
+              <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 sm:w-4 sm:h-4 bg-accent rounded-full flex items-center justify-center">
+                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
               </div>
             </div>
-            <div className="hidden sm:block">
-              <p className="font-bold text-foreground text-sm md:text-base leading-tight group-hover:text-accent transition-colors duration-300">
+            <div className="hidden sm:block md:hidden lg:block">
+              <p className="font-bold text-foreground text-xs sm:text-sm md:text-sm lg:text-base leading-tight group-hover:text-accent transition-colors duration-300">
                 Founders
               </p>
-              <p className="text-xs text-muted-foreground leading-tight">
+              <p className="text-[10px] sm:text-xs text-muted-foreground leading-tight">
                 Toastmasters Club
               </p>
             </div>
           </motion.a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.href}
                 href={item.href}
-                className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-lg hover:bg-accent/5 group"
-                whileHover={{ y: -2 }}
+                className="relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-lg hover:bg-accent/5 group"
+                whileHover={{ y: -1 }}
                 transition={{ duration: 0.2 }}
               >
                 {item.label}
@@ -76,20 +76,20 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center gap-3">
-            <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
-              <a href="#contact" className="flex items-center gap-2">
+          {/* CTA Button - Hidden on mobile, shown on tablet and up */}
+          <div className="hidden md:flex items-center gap-2 lg:gap-3">
+            <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 text-xs lg:text-sm xl:text-base px-3 lg:px-4 py-2 lg:py-2.5">
+              <a href="#contact" className="flex items-center gap-1.5 lg:gap-2">
                 Join Us
-                <ChevronDown size={16} className="rotate-[-90deg]" />
+                <ChevronDown size={14} className="rotate-[-90deg]" />
               </a>
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile/Tablet Menu Toggle */}
           <motion.button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:bg-accent/10 rounded-lg transition-colors duration-300"
+            className="lg:hidden p-1.5 sm:p-2 text-foreground hover:bg-accent/10 rounded-lg transition-colors duration-300"
             aria-label="Toggle menu"
             whileTap={{ scale: 0.95 }}
           >
@@ -97,13 +97,13 @@ export const Header = () => {
               animate={{ rotate: isMenuOpen ? 180 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={20} className="sm:w-6 sm:h-6" /> : <Menu size={20} className="sm:w-6 sm:h-6" />}
             </motion.div>
           </motion.button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile/Tablet Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -111,19 +111,19 @@ export const Header = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200/50 shadow-card"
+            className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200/50 shadow-card"
           >
-            <nav className="container-wide py-6">
-              <div className="flex flex-col gap-2">
+            <nav className="container-wide py-4 sm:py-6 px-2 sm:px-4 md:px-6 lg:px-8">
+              <div className="flex flex-col gap-1 sm:gap-2">
                 {navItems.map((item, index) => (
                   <motion.a
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="px-4 py-3 text-base font-medium text-foreground hover:bg-accent/10 rounded-xl transition-all duration-300 hover:translate-x-2"
+                    className="px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base font-medium text-foreground hover:bg-accent/10 rounded-lg sm:rounded-xl transition-all duration-300 hover:translate-x-1 sm:hover:translate-x-2"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ delay: index * 0.08 }}
                   >
                     {item.label}
                   </motion.a>
@@ -131,10 +131,11 @@ export const Header = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
+                  transition={{ delay: 0.4 }}
+                  className="mt-2 sm:mt-4"
                 >
-                  <Button className="w-full mt-4 bg-accent hover:bg-accent/90 text-white py-3 rounded-xl shadow-lg">
-                    <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-white py-2.5 sm:py-3 rounded-lg sm:rounded-xl shadow-lg text-sm sm:text-base">
+                    <a href="#contact" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-center gap-2">
                       Visit as Guest
                     </a>
                   </Button>

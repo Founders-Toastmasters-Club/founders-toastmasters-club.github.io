@@ -111,9 +111,9 @@ export const About = () => {
             <motion.div
               animate={{ rotate: [0, 5, -5, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-4 -left-4 bg-white rounded-2xl p-3 shadow-card border"
+              className="absolute -top-2 -left-2 bg-white rounded-2xl p-2 shadow-card border hidden sm:block"
             >
-              <BookOpen className="text-accent" size={24} />
+              <BookOpen className="text-accent" size={20} />
             </motion.div>
             <motion.div
               animate={{ y: [0, -8, 0] }}
@@ -123,10 +123,10 @@ export const About = () => {
                 ease: "easeInOut",
                 delay: 1,
               }}
-              className="absolute -bottom-6 -right-6 bg-accent text-white px-4 py-2 rounded-xl shadow-card"
+              className="absolute -bottom-4 -right-4 bg-accent text-white px-3 py-1 rounded-xl shadow-card text-sm hidden sm:block"
             >
-              <p className="font-bold text-lg">5+ Years</p>
-              <p className="text-sm opacity-90">of Excellence</p>
+              <p className="font-bold text-sm">5+ Years</p>
+              <p className="text-xs opacity-90">of Excellence</p>
             </motion.div>
           </motion.div>
 

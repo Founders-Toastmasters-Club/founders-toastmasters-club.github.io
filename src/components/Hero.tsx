@@ -138,11 +138,11 @@ export const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -top-8 -left-8 bg-white rounded-2xl p-4 shadow-card border z-10"
+                className="absolute -top-4 -left-4 bg-white rounded-2xl p-3 shadow-card border z-10 hidden sm:block"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <Mic className="text-accent" size={20} />
+                  <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <Mic className="text-accent" size={16} />
                   </div>
                   <div>
                     <div className="font-semibold text-sm">Public Speaking</div>
@@ -161,11 +161,11 @@ export const Hero = () => {
                   ease: "easeInOut",
                   delay: 1,
                 }}
-                className="absolute -bottom-8 -right-8 bg-white rounded-2xl p-4 shadow-card border z-10"
+                className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-3 shadow-card border z-10 hidden sm:block"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <Trophy className="text-accent" size={20} />
+                  <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <Trophy className="text-accent" size={16} />
                   </div>
                   <div>
                     <div className="font-semibold text-sm">Leadership</div>
@@ -181,7 +181,7 @@ export const Hero = () => {
                 <img
                   src={heroImage}
                   alt="Toastmasters speaking event"
-                  className="w-full h-80 object-cover rounded-2xl"
+                  className="w-full h-64 md:h-80 object-cover rounded-2xl"
                 />
                 <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur rounded-xl p-4">
                   <div className="flex items-center gap-3">

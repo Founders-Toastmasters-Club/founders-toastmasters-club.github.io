@@ -127,7 +127,7 @@ export const Meetings = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
-                  className="relative flex items-center gap-6"
+                  className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
                 >
                   {/* Time circle */}
                   <div className="relative z-10 flex-shrink-0">
@@ -139,16 +139,16 @@ export const Meetings = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="bg-white rounded-2xl p-6 shadow-card border border-gray-100 flex-1 hover:shadow-elevated transition-shadow duration-300">
-                    <div className="flex items-center gap-4 mb-2">
-                      <span className="font-bold text-accent text-lg">
+                  <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-card border border-gray-100 flex-1 hover:shadow-elevated transition-shadow duration-300 ml-0 sm:ml-0">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-2">
+                      <span className="font-bold text-accent text-base sm:text-lg">
                         {item.time}
                       </span>
-                      <h4 className="font-semibold text-foreground text-xl">
+                      <h4 className="font-semibold text-foreground text-lg sm:text-xl">
                         {item.title}
                       </h4>
                     </div>
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <p className="text-muted-foreground text-sm sm:text-base">{item.description}</p>
                   </div>
                 </motion.div>
               ))}
