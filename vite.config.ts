@@ -12,8 +12,8 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  base: "/founders-toastmasters-nepal/",
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  base: "/founders-toastmasters-nepal/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
