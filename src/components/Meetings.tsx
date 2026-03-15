@@ -116,44 +116,53 @@ export const Meetings = () => {
             A Typical Meeting Flow
           </h3>
           <div className="relative max-w-4xl mx-auto">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-accent to-accent/50"></div>
+          <div className="space-y-8">
+            {meetingFlow.map((item, index) => (
+              <motion.div
+                key={item.time}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
+              >
+                {/* Icon + connector */}
+                <div className="relative z-10 flex flex-col items-center">
+                  {/* Icon */}
+                  <div
+                    className={`w-16 h-16 rounded-full ${item.color} flex items-center justify-center shadow-lg`}
+                  >
+                    <item.icon size={24} />
+                  </div>
 
-            <div className="space-y-8">
-              {meetingFlow.map((item, index) => (
-                <motion.div
-                  key={item.time}
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
-                  className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
-                >
-                  {/* Time circle */}
-                  <div className="relative z-10 flex-shrink-0">
+                  {/* Connector line: only if not last item */}
+                  {index < meetingFlow.length - 1 && (
                     <div
-                      className={`w-16 h-16 rounded-full ${item.color} flex items-center justify-center shadow-lg`}
-                    >
-                      <item.icon size={24} />
-                    </div>
-                  </div>
+                      className="absolute top-full left-1/2 w-0.5 bg-gradient-to-b from-accent via-accent to-accent/50"
+                      style={{
+                        height: `calc(100% + 1rem)`, // adjusts dynamically with gap between items
+                        transform: "translateX(-50%)",
+                      }}
+                    />
+                  )}
+                </div>
 
-                  {/* Content */}
-                  <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-card border border-gray-100 flex-1 hover:shadow-elevated transition-shadow duration-300 ml-0 sm:ml-0">
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-2">
-                      <span className="font-bold text-accent text-base sm:text-lg">
-                        {item.time}
-                      </span>
-                      <h4 className="font-semibold text-foreground text-lg sm:text-xl">
-                        {item.title}
-                      </h4>
-                    </div>
-                    <p className="text-muted-foreground text-sm sm:text-base">{item.description}</p>
+                {/* Content */}
+                <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-card border border-gray-100 flex-1 hover:shadow-elevated transition-shadow duration-300 ml-0 sm:ml-0">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-2">
+                    <span className="font-bold text-accent text-base sm:text-lg">
+                      {item.time}
+                    </span>
+                    <h4 className="font-semibold text-foreground text-lg sm:text-xl">
+                      {item.title}
+                    </h4>
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                  <p className="text-muted-foreground text-sm sm:text-base">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
+        </div>
         </motion.div>
 
         {/* Visual Section */}
