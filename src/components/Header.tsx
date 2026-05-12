@@ -44,14 +44,14 @@ export const Header = () => {
               <img 
                 src={logo} 
                 alt="Founders Toastmasters Club Logo" 
-                className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-full ring-2 ring-accent/20 group-hover:ring-accent/40 transition-all duration-300" 
+                className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-full ring-2 ring-loyal-blue/20 group-hover:ring-loyal-blue/40 transition-all duration-300"
               />
-              <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 sm:w-4 sm:h-4 bg-accent rounded-full flex items-center justify-center">
+              <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 sm:w-4 sm:h-4 bg-loyal-blue rounded-full flex items-center justify-center">
                 <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
               </div>
             </div>
             <div className="hidden sm:block md:hidden lg:block">
-              <p className="font-bold text-foreground text-xs sm:text-sm md:text-sm lg:text-base leading-tight group-hover:text-accent transition-colors duration-300">
+              <p className="font-bold text-foreground text-xs sm:text-sm md:text-sm lg:text-base leading-tight group-hover:text-loyal-blue transition-colors duration-300">
                 Founders
               </p>
               <p className="text-[10px] sm:text-xs text-muted-foreground leading-tight">
@@ -66,19 +66,19 @@ export const Header = () => {
               <motion.a
                 key={item.href}
                 href={item.href}
-                className="relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-lg hover:bg-accent/5 group"
+                className="relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-lg hover:bg-loyal-blue/5 group"
                 whileHover={{ y: -1 }}
                 transition={{ duration: 0.2 }}
               >
                 {item.label}
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-loyal-blue group-hover:w-full transition-all duration-300"></span>
               </motion.a>
             ))}
           </nav>
 
           {/* CTA Button - Hidden on mobile, shown on tablet and up */}
           <div className="hidden md:flex items-center gap-2 lg:gap-3">
-            <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 text-xs lg:text-sm xl:text-base px-3 lg:px-4 py-2 lg:py-2.5">
+            <Button variant="primaryOutline" className="text-xs lg:text-sm xl:text-base px-3 lg:px-4 py-2 lg:py-2.5 hover:-translate-y-0.5">
               <a href="#contact" className="flex items-center gap-1.5 lg:gap-2">
                 Join Us
                 <ChevronDown size={14} className="rotate-[-90deg]" />
@@ -89,7 +89,7 @@ export const Header = () => {
           {/* Mobile/Tablet Menu Toggle */}
           <motion.button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-1.5 sm:p-2 text-foreground hover:bg-accent/10 rounded-lg transition-colors duration-300"
+            className="lg:hidden p-1.5 sm:p-2 text-foreground hover:bg-loyal-blue/10 rounded-lg transition-colors duration-300"
             aria-label="Toggle menu"
             whileTap={{ scale: 0.95 }}
           >
@@ -120,7 +120,7 @@ export const Header = () => {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base font-medium text-foreground hover:bg-accent/10 rounded-lg sm:rounded-xl transition-all duration-300 hover:translate-x-1 sm:hover:translate-x-2"
+                    className="px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base font-medium text-foreground hover:bg-loyal-blue/10 rounded-lg sm:rounded-xl transition-all duration-300 hover:translate-x-1 sm:hover:translate-x-2"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.08 }}
@@ -134,7 +134,7 @@ export const Header = () => {
                   transition={{ delay: 0.4 }}
                   className="mt-2 sm:mt-4"
                 >
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-white py-2.5 sm:py-3 rounded-lg sm:rounded-xl shadow-lg text-sm sm:text-base">
+                  <Button variant="primaryOutline" className="w-full py-2.5 sm:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base">
                     <a href="#contact" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-center gap-2">
                       Visit as Guest
                     </a>

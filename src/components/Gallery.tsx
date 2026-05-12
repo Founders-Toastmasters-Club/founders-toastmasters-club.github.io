@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Camera, Heart, Users, Mic, Trophy } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-speaking.jpg";
 import groupMeetingImage from "@/assets/group-meeting.jpg";
 import tableTopicsImage from "@/assets/table-topics.jpg";
@@ -64,14 +65,14 @@ export const Gallery = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-loyal-blue/10 text-loyal-blue font-medium text-sm mb-4">
             <Camera size={16} />
             Our Story in Pictures
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Capturing
             <br />
-            <span className="text-accent">Memorable Moments</span>
+            <span className="text-maroon">Memorable Moments</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             From nervous first speeches to triumphant victories, every moment at
@@ -125,7 +126,7 @@ export const Gallery = () => {
                 }}
                 className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <image.icon className="text-accent" size={20} />
+                <image.icon className="text-loyal-blue" size={20} />
               </motion.div>
             </motion.div>
           ))}
@@ -140,7 +141,7 @@ export const Gallery = () => {
           className="text-center"
         >
           <div className="bg-white rounded-2xl p-8 shadow-card border border-gray-100 max-w-2xl mx-auto">
-            <Camera className="text-accent mx-auto mb-4" size={48} />
+            <Camera className="text-loyal-blue mx-auto mb-4" size={48} />
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Want to Be in Our Next Photo?
             </h3>
@@ -150,20 +151,18 @@ export const Gallery = () => {
               your journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact"
-                className="block sm:inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-xl font-medium transition-colors duration-300"
-              >
-                Visit as Guest
-              </a>
-              <a
-                href="https://www.instagram.com/founderstoastmastersclub"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block sm:inline-flex items-center gap-2 border-2 border-accent text-accent hover:bg-accent hover:text-white px-6 py-3 rounded-xl font-medium transition-all duration-300"
-              >
-                Follow on Instagram
-              </a>
+              <Button variant="primary" className="px-6 py-3 rounded-xl">
+                <a href="#contact">Visit as Guest</a>
+              </Button>
+              <Button variant="primaryOutline" className="px-6 py-3 rounded-xl">
+                <a
+                  href="https://www.instagram.com/founderstoastmastersclub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Follow on Instagram
+                </a>
+              </Button>
             </div>
           </div>
         </motion.div>

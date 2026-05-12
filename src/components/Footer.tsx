@@ -84,9 +84,9 @@ export const Footer = () => {
                 <img
                   src={logo}
                   alt="Founders Toastmasters Club Logo"
-                  className="w-14 h-14 rounded-full ring-2 ring-accent/20"
+                  className="w-14 h-14 rounded-full ring-2 ring-loyal-blue/20"
                 />
-                <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-accent rounded-full flex items-center justify-center">
+                <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-loyal-blue rounded-full flex items-center justify-center">
                   <Heart className="text-white" size={12} />
                 </div>
               </div>
@@ -148,7 +148,7 @@ export const Footer = () => {
                 >
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-accent transition-colors duration-300 text-sm font-medium hover:translate-x-1 inline-block"
+                    className="text-muted-foreground hover:text-loyal-blue transition-colors duration-300 text-sm font-medium hover:translate-x-1 inline-block"
                   >
                     {link.label}
                   </a>
@@ -187,7 +187,7 @@ export const Footer = () => {
                       <a
                         href={info.link}
                         target="_blank"
-                        className="text-sm text-muted-foreground hover:text-accent transition-colors duration-300"
+                        className="text-sm text-muted-foreground hover:text-loyal-blue transition-colors duration-300"
                       >
                         <p className="text-sm font-medium text-foreground">
                           {info.label}
@@ -216,35 +216,35 @@ export const Footer = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
         >
           <div className="text-center">
-            <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-2">
-              <Users className="text-accent" size={24} />
+            <div className="w-12 h-12 bg-loyal-blue/10 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <Users className="text-loyal-blue" size={24} />
             </div>
-            <div className="text-2xl font-bold text-accent">15+</div>
+            <div className="text-2xl font-bold text-loyal-blue">15+</div>
             <div className="text-sm text-muted-foreground">Active Members</div>
           </div>
           <div className="text-center">
-            <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-2">
-              <Mic className="text-accent" size={24} />
+            <div className="w-12 h-12 bg-maroon/10 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <Mic className="text-maroon" size={24} />
             </div>
-            <div className="text-2xl font-bold text-accent">200+</div>
+            <div className="text-2xl font-bold text-maroon">200+</div>
             <div className="text-sm text-muted-foreground">
-              Meeting Completed
+              Meetings Completed
             </div>
           </div>
           <div className="text-center">
-            <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-2">
-              <Award className="text-accent" size={24} />
+            <div className="w-12 h-12 bg-loyal-blue/10 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <Award className="text-loyal-blue" size={24} />
             </div>
-            <div className="text-2xl font-bold text-accent">5+</div>
+            <div className="text-2xl font-bold text-loyal-blue">5+</div>
             <div className="text-sm text-muted-foreground">
               Years of Excellence
             </div>
           </div>
           <div className="text-center">
-            <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-2">
-              <Heart className="text-accent" size={24} />
+            <div className="w-12 h-12 bg-maroon/10 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <Heart className="text-maroon" size={24} />
             </div>
-            <div className="text-2xl font-bold text-accent">100%</div>
+            <div className="text-2xl font-bold text-maroon">100%</div>
             <div className="text-sm text-muted-foreground">
               Passionate Community
             </div>
@@ -270,7 +270,7 @@ export const Footer = () => {
                 href="https://www.toastmasters.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:text-accent/80 transition-colors duration-300 font-medium underline"
+                className="text-loyal-blue hover:text-loyal-blue/80 transition-colors duration-300 font-medium underline"
               >
                 Toastmasters International
               </a>

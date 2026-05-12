@@ -74,14 +74,14 @@ export const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-12 lg:mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-xs md:text-sm mb-3 md:mb-4">
+          <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-loyal-blue/10 text-loyal-blue font-medium text-xs md:text-sm mb-3 md:mb-4">
             <Send size={14} className="md:w-4 md:h-4" />
             Join Our Community
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
             Your Journey
             <br className="hidden sm:block" />
-            <span className="text-accent">Starts Here</span>
+            <span className="text-maroon">Starts Here</span>
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
             Ready to transform your communication skills? Visit us as a guest
@@ -100,9 +100,9 @@ export const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             {/* Guest Experience Card */}
-            <div className="bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 border border-accent/20 shadow-card mb-6">
+            <div className="bg-gradient-to-br from-loyal-blue/5 to-loyal-blue/10 rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 border border-loyal-blue/20 shadow-card mb-6">
               <div className="flex items-center gap-3 mb-4 md:mb-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-loyal-blue rounded-full flex items-center justify-center flex-shrink-0">
                   <Phone className="text-white" size={18} />
                 </div>
                 <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-foreground">
@@ -124,14 +124,14 @@ export const Contact = () => {
                   "Networking with like-minded professionals",
                   "Free - no commitment required",
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0 mt-1.5"></div>
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-loyal-blue rounded-full flex-shrink-0 mt-1.5"></div>
                     <span className="text-foreground text-sm md:text-base leading-relaxed">{item}</span>
                   </div>
                 ))}
               </div>
 
-              <Button className="w-full bg-accent hover:bg-accent/90 text-white py-3 md:py-4 text-sm md:text-base lg:text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+              <Button variant="primary" className="w-full py-3 md:py-4 text-sm md:text-base lg:text-lg rounded-xl flex items-center justify-center gap-2">
                 <Mail size={16} />
                 <a
                   href="mailto:founderstoastmastersclub@gmail.com?subject=Guest Visit Inquiry"
@@ -145,21 +145,21 @@ export const Contact = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-3 md:gap-4 mb-6">
               <div className="bg-white rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 shadow-soft border border-gray-100 text-center hover:shadow-card transition-shadow duration-300">
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-accent mb-1">0</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-loyal-blue mb-1">0</div>
                 <div className="text-xs md:text-sm text-muted-foreground">
                   Fee to Visit
                 </div>
               </div>
               <div className="bg-white rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 shadow-soft border border-gray-100 text-center hover:shadow-card transition-shadow duration-300">
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-accent mb-1">90</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-loyal-blue mb-1">90</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Minutes</div>
               </div>
             </div>
 
             {/* Pro tip */}
-            <div className="text-center bg-accent/5 rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 border border-accent/10">
+            <div className="text-center bg-loyal-blue/5 rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 border border-loyal-blue/10">
               <p className="text-muted-foreground text-sm md:text-base">
-                <span className="font-medium text-accent">Pro tip:</span> Just show up!
+                <span className="font-medium text-loyal-blue">Pro tip:</span> Just show up!
                 Guests are always welcome at our meetings.
               </p>
             </div>

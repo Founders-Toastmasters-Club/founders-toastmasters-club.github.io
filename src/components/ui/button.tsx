@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -15,7 +15,11 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Toastmasters brand variants
+        // Toastmasters brand variants - Primary (Loyal Blue)
+        primary: "bg-loyal-blue text-white font-semibold shadow-lg shadow-loyal-blue/25 border-2 border-loyal-blue hover:bg-transparent hover:text-loyal-blue hover:shadow-none",
+        // Toastmasters brand variants - Primary Outline (transparent, becomes solid on hover)
+        primaryOutline: "border-2 border-loyal-blue/30 bg-transparent text-loyal-blue font-semibold hover:bg-loyal-blue hover:text-white hover:border-loyal-blue hover:shadow-lg hover:shadow-loyal-blue/25",
+        // Legacy variants (kept for compatibility)
         hero: "bg-happy-yellow text-foreground font-semibold hover:bg-happy-yellow-dark hover:scale-105 shadow-lg hover:shadow-glow",
         heroOutline: "border-2 border-primary-foreground/30 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 hover:border-primary-foreground/50 font-semibold",
         cta: "bg-happy-yellow text-foreground font-semibold hover:bg-happy-yellow-dark shadow-soft hover:shadow-card",

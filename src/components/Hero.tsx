@@ -122,8 +122,8 @@ export const Hero = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Button
+                variant="primary"
                 size="lg"
-                className="bg-loyal-blue hover:bg-loyal-blue-dark text-white shadow-lg shadow-loyal-blue/25 hover:shadow-xl hover:shadow-loyal-blue/30 transition-all duration-300"
               >
                 <a href="#contact" className="flex items-center gap-2">
                   Join Our Community
@@ -131,9 +131,9 @@ export const Hero = () => {
                 </a>
               </Button>
               <Button
-                variant="outline"
+                variant="primaryOutline"
                 size="lg"
-                className="border-2 border-loyal-blue/20 bg-white/50 backdrop-blur-sm hover:bg-white/80 hover:border-loyal-blue/30 transition-all duration-300"
+                className="bg-white/50 backdrop-blur-sm"
               >
                 <a href="#about">Discover More</a>
               </Button>
