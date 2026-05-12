@@ -88,7 +88,7 @@ export const Hero = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-md text-loyal-blue font-medium text-sm border border-loyal-blue/10 shadow-lg shadow-loyal-blue/5"
               >
-                <MapPin size={16} className="text-accent" />
+                <MapPin size={16} className="text-maroon" />
                 Kathmandu, Nepal • District 41
               </motion.div>
 
@@ -100,7 +100,7 @@ export const Hero = () => {
               >
                 Craft Your Voice,
                 <br />
-                <span className="text-accent">Shape Your Future</span>
+                <span className="text-maroon">Shape Your Future</span>
               </motion.h1>
 
               <motion.p
@@ -186,8 +186,8 @@ export const Hero = () => {
                 className="absolute -top-4 -left-4 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-lg shadow-loyal-blue/10 border border-white/60 z-10 hidden sm:block"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <Mic className="text-accent" size={16} />
+                  <div className="w-8 h-8 bg-loyal-blue/10 rounded-lg flex items-center justify-center">
+                    <Mic className="text-loyal-blue" size={16} />
                   </div>
                   <div>
                     <div className="font-semibold text-sm">Public Speaking</div>
@@ -209,8 +209,8 @@ export const Hero = () => {
                 className="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-lg shadow-loyal-blue/10 border border-white/60 z-10 hidden sm:block"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <Trophy className="text-accent" size={16} />
+                  <div className="w-8 h-8 bg-maroon/10 rounded-lg flex items-center justify-center">
+                    <Trophy className="text-maroon" size={16} />
                   </div>
                   <div>
                     <div className="font-semibold text-sm">Leadership</div>
@@ -230,7 +230,7 @@ export const Hero = () => {
                 />
                 <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur rounded-xl p-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-maroon rounded-full flex items-center justify-center">
                       <Heart className="text-white" size={24} />
                     </div>
                     <div>
@@ -255,8 +255,8 @@ export const Hero = () => {
         >
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
-                <Calendar className="text-accent" size={24} />
+              <div className="w-12 h-12 bg-loyal-blue/10 rounded-xl flex items-center justify-center">
+                <Calendar className="text-loyal-blue" size={24} />
               </div>
               <div className="text-left">
                 <p className="font-semibold text-foreground">Every Wednesday</p>
@@ -266,8 +266,8 @@ export const Hero = () => {
               </div>
             </div>
             <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
-                <MapPin className="text-accent" size={24} />
+              <div className="w-12 h-12 bg-maroon/10 rounded-xl flex items-center justify-center">
+                <MapPin className="text-maroon" size={24} />
               </div>
               <div className="text-left">
                 <p className="font-semibold text-foreground">Rooster Logic Pvt. Ltd.</p>
@@ -277,8 +277,8 @@ export const Hero = () => {
               </div>
             </div>
             <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
-                <Users className="text-accent" size={24} />
+              <div className="w-12 h-12 bg-loyal-blue/10 rounded-xl flex items-center justify-center">
+                <Users className="text-loyal-blue" size={24} />
               </div>
               <div className="text-left">
                 <p className="font-semibold text-foreground">

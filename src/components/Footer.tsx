@@ -270,7 +270,7 @@ export const Footer = () => {
                 href="https://www.toastmasters.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:text-accent/80 transition-colors duration-300 font-medium"
+                className="text-accent hover:text-accent/80 transition-colors duration-300 font-medium underline"
               >
                 Toastmasters International
               </a>

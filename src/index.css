@@ -49,7 +49,7 @@
     --cool-grey-light: 168 8% 85%;
     --cool-grey-dark: 168 10% 40%;
     
-    /* Happy Yellow: #F2DF74 (RGB 242, 223, 116) - ACCENT */
+    /* Happy Yellow: #F2DF74 (RGB 242, 223, 116) - ACCENT (sparingly) */
     --happy-yellow: 50 86% 70%;
     --happy-yellow-dark: 50 90% 55%;
     --happy-yellow-light: 50 80% 85%;
@@ -75,9 +75,9 @@
     --muted: 168 8% 85%;
     --muted-foreground: 200 100% 30%;
 
-    /* Accent: Happy Yellow */
-    --accent: 50 86% 70%;
-    --accent-foreground: 200 100% 15%;
+    /* Accent: Cool Gray with blue tint (subtle, professional) */
+    --accent: 200 25% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -91,13 +91,13 @@
     /* Custom Design Tokens - Toastmasters Brand */
     --gradient-hero: linear-gradient(135deg, hsl(200 100% 20%) 0%, hsl(200 100% 15%) 100%);
     --gradient-hero-overlay: linear-gradient(180deg, hsla(200, 100%, 20%, 0.9) 0%, hsla(200, 100%, 15%, 0.95) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(50 86% 70%) 0%, hsl(50 86% 60%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(200 25% 55%) 0%, hsl(200 30% 45%) 100%);
     --gradient-section: linear-gradient(180deg, hsl(0 0% 98%) 0%, hsl(200 15% 96%) 100%);
     
     --shadow-soft: 0 4px 20px -4px hsla(200, 100%, 20%, 0.08);
     --shadow-card: 0 8px 30px -8px hsla(200, 100%, 20%, 0.12);
     --shadow-elevated: 0 20px 50px -15px hsla(200, 100%, 20%, 0.15);
-    --shadow-glow: 0 0 40px -10px hsla(50, 86%, 70%, 0.4);
+    --shadow-glow: 0 0 40px -10px hsla(200, 25%, 55%, 0.4);
 
     /* Sidebar tokens - Toastmasters branded */
     --sidebar-background: 0 0% 98%;
@@ -129,8 +129,8 @@
     --muted: 200 30% 15%;
     --muted-foreground: 168 10% 65%;
 
-    --accent: 50 80% 60%;
-    --accent-foreground: 200 50% 10%;
+    --accent: 200 35% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 40%;
     --destructive-foreground: 0 0% 100%;
