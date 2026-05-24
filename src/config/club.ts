@@ -47,11 +47,11 @@ export const clubConfig = {
     facebook: "https://www.facebook.com/FoundersToastmastersClub",
     linkedin: "https://www.linkedin.com/company/founders-toastmasters-club",
   },
-
-  // Contact
+// Contact
   contact: {
     email: "founderstoastmastersclub@gmail.com",
     phone: "", // Add if needed
+    guestFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeXfdYqIs8xPBoIKLhJF5vTxY_FYskLM0MVX4d6NTgMeKqiSQ/viewform",
   },
 };
 

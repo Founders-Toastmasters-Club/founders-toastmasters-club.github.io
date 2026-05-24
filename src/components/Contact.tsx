@@ -9,6 +9,7 @@ import {
   ExternalLink,
   Send,
   Phone,
+  ClipboardList,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { clubConfig, formatMeetingSchedule, formatMeetingTime } from "@/config/club";
@@ -132,15 +133,30 @@ export const Contact = () => {
                 ))}
               </div>
 
-              <Button variant="primary" className="w-full py-3 md:py-4 text-sm md:text-base lg:text-lg rounded-xl flex items-center justify-center gap-2">
-                <Mail size={16} />
-                <a
-                  href={`mailto:${clubConfig.contact.email}?subject=Guest Visit Inquiry`}
-                  className="inline-block"
-                >
-                  Email to Visit as Guest
-                </a>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                {clubConfig.contact.guestFormUrl && (
+                  <Button variant="primary" className="flex-1 py-3 md:py-4 text-sm md:text-base lg:text-lg rounded-xl flex items-center justify-center gap-2">
+                    <ClipboardList size={16} />
+                    <a
+                      href={clubConfig.contact.guestFormUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      Register as Guest
+                    </a>
+                  </Button>
+                )}
+                <Button variant={clubConfig.contact.guestFormUrl ? "primaryOutline" : "primary"} className="flex-1 py-3 md:py-4 text-sm md:text-base lg:text-lg rounded-xl flex items-center justify-center gap-2">
+                  <Mail size={16} />
+                  <a
+                    href={`mailto:${clubConfig.contact.email}?subject=Guest Visit Inquiry`}
+                    className="inline-block"
+                  >
+                    Email Us
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Quick Stats */}

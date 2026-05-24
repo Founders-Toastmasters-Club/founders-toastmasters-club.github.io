@@ -51,8 +51,8 @@ const galleryImages = [
   // Row 3: Joint meetings stacked on left, Contest independent on right
   {
     src: jointMeetingAIN,
-    alt: "Joint meeting with AIN Toastmasters",
-    title: "AIN Joint Meet",
+    alt: "Joint meeting with AIN Toastmasters Club",
+    title: "Apex TMC Joint Meet",
     desc: "Collaboration across clubs",
     icon: Heart,
     span: "md:col-span-2",
@@ -69,8 +69,8 @@ const galleryImages = [
   },
   {
     src: jointMeetingSagarmatha,
-    alt: "Joint meeting with Sagarmatha Toastmasters",
-    title: "Sagarmatha Meet",
+    alt: "Joint meeting with Sagarmatha Toastmasters Club",
+    title: "Sagarmatha TMC Joint Meet",
     desc: "Building bridges together",
     icon: Star,
     span: "md:col-span-2",
