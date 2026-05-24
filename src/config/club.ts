@@ -18,8 +18,8 @@ export const clubConfig = {
   // Meeting Schedule
   meeting: {
     day: "Wednesday",
-    startTime: "6:00 PM",
-    endTime: "7:30 PM",
+    startTime: "6:10 PM",
+    endTime: "7:40 PM",
     duration: "90",
   },
 
