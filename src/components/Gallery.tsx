@@ -18,7 +18,7 @@ const galleryImages = [
     desc: "A historic milestone celebration",
     icon: Trophy,
     span: "md:col-span-4",
-    aspect: "aspect-[21/9]",
+    aspect: "aspect-[4/3] md:aspect-[21/9]",
   },
   // Row 2: Own club meetings - Community spans 2 rows, portrait images stacked
   {
@@ -28,7 +28,7 @@ const galleryImages = [
     desc: "Our vibrant Toastmasters family",
     icon: Users,
     span: "md:col-span-2 md:row-span-2",
-    aspect: "aspect-square",
+    aspect: "aspect-[4/3] md:aspect-square",
   },
   {
     src: maghiGroupPhoto,
@@ -37,7 +37,7 @@ const galleryImages = [
     desc: "Embracing culture and traditions",
     icon: PartyPopper,
     span: "md:col-span-2",
-    aspect: "aspect-[2/1]",
+    aspect: "aspect-[4/3] md:aspect-[2/1]",
   },
   {
     src: meetingGlimpses,
@@ -46,7 +46,7 @@ const galleryImages = [
     desc: "Moments from our regular sessions",
     icon: Camera,
     span: "md:col-span-2",
-    aspect: "aspect-[2/1]",
+    aspect: "aspect-[4/3] md:aspect-[2/1]",
   },
   // Row 3: Joint meetings stacked on left, Contest independent on right
   {
@@ -56,7 +56,7 @@ const galleryImages = [
     desc: "Collaboration across clubs",
     icon: Heart,
     span: "md:col-span-2",
-    aspect: "aspect-[2/1]",
+    aspect: "aspect-[4/3] md:aspect-[2/1]",
   },
   {
     src: tableTopicContest,
@@ -65,7 +65,7 @@ const galleryImages = [
     desc: "Impromptu speaking at its finest",
     icon: Mic,
     span: "md:col-span-2 md:row-span-2",
-    aspect: "aspect-square",
+    aspect: "aspect-[4/3] md:aspect-square",
   },
   {
     src: jointMeetingSagarmatha,
@@ -74,7 +74,7 @@ const galleryImages = [
     desc: "Building bridges together",
     icon: Star,
     span: "md:col-span-2",
-    aspect: "aspect-[2/1]",
+    aspect: "aspect-[4/3] md:aspect-[2/1]",
   },
 ];
 
