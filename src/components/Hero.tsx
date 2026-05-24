@@ -253,9 +253,9 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 bg-white/80 backdrop-blur-md rounded-2xl p-8 shadow-lg shadow-loyal-blue/5 border border-white/60"
         >
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 bg-loyal-blue/10 rounded-xl flex items-center justify-center">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            <div className="flex items-center justify-start md:justify-center gap-4">
+              <div className="w-12 h-12 bg-loyal-blue/10 rounded-xl flex items-center justify-center shrink-0">
                 <Calendar className="text-loyal-blue" size={24} />
               </div>
               <div className="text-left">
@@ -265,8 +265,8 @@ export const Hero = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 bg-maroon/10 rounded-xl flex items-center justify-center">
+            <div className="flex items-center justify-start md:justify-center gap-4">
+              <div className="w-12 h-12 bg-maroon/10 rounded-xl flex items-center justify-center shrink-0">
                 <MapPin className="text-maroon" size={24} />
               </div>
               <div className="text-left">
@@ -276,8 +276,8 @@ export const Hero = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 bg-loyal-blue/10 rounded-xl flex items-center justify-center">
+            <div className="flex items-center justify-start md:justify-center gap-4">
+              <div className="w-12 h-12 bg-loyal-blue/10 rounded-xl flex items-center justify-center shrink-0">
                 <Users className="text-loyal-blue" size={24} />
               </div>
               <div className="text-left">
