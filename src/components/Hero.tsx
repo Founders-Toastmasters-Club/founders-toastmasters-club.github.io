@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-speaking.jpg";
+import { clubConfig, formatMeetingTime, formatMeetingSchedule, formatDivisionArea, formatDistrict } from "@/config/club";
 
 export const Hero = () => {
   return (
@@ -259,9 +260,9 @@ export const Hero = () => {
                 <Calendar className="text-loyal-blue" size={24} />
               </div>
               <div className="text-left">
-                <p className="font-semibold text-foreground">Every Wednesday</p>
+                <p className="font-semibold text-foreground">{formatMeetingSchedule()}</p>
                 <p className="text-muted-foreground text-sm">
-                  6:00 PM - 7:30 PM
+                  {formatMeetingTime()}
                 </p>
               </div>
             </div>
@@ -270,9 +271,9 @@ export const Hero = () => {
                 <MapPin className="text-maroon" size={24} />
               </div>
               <div className="text-left">
-                <p className="font-semibold text-foreground">Rooster Logic Pvt. Ltd.</p>
+                <p className="font-semibold text-foreground">{clubConfig.location.venue}</p>
                 <p className="text-muted-foreground text-sm">
-                  Gairidhara, Kathmandu
+                  {clubConfig.location.address}
                 </p>
               </div>
             </div>
@@ -282,9 +283,9 @@ export const Hero = () => {
               </div>
               <div className="text-left">
                 <p className="font-semibold text-foreground">
-                  Division C, Area C1
+                  {formatDivisionArea()}
                 </p>
-                <p className="text-muted-foreground text-sm">District 41</p>
+                <p className="text-muted-foreground text-sm">{formatDistrict()}</p>
               </div>
             </div>
           </div>

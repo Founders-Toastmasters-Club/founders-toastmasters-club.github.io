@@ -11,33 +11,34 @@ import {
   Phone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { clubConfig, formatMeetingSchedule, formatMeetingTime } from "@/config/club";
 
 const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Rooster Logic Pvt. Ltd.",
-    subvalue: "Gairidhara, Naxal, Kathmandu",
+    value: clubConfig.location.venue,
+    subvalue: clubConfig.location.fullAddress,
     color: "bg-loyal-blue/10 text-loyal-blue",
   },
   {
     icon: Calendar,
     label: "Meeting Day",
-    value: "Every Wednesday",
+    value: formatMeetingSchedule(),
     subvalue: "Consistent weekly schedule",
     color: "bg-happy-yellow/20 text-maroon",
   },
   {
     icon: Clock,
     label: "Time",
-    value: "6:00 PM - 7:40 PM",
-    subvalue: "90 minutes of inspiration",
+    value: formatMeetingTime(),
+    subvalue: `${clubConfig.meeting.duration} minutes of inspiration`,
     color: "bg-cool-grey/10 text-cool-grey-dark",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "founderstoastmastersclub@gmail.com",
+    value: clubConfig.contact.email,
     subvalue: "Drop us a message anytime",
     color: "bg-maroon/10 text-maroon",
   },
@@ -47,13 +48,13 @@ const socialLinks = [
   {
     icon: Facebook,
     label: "Facebook",
-    href: "https://www.facebook.com/FoundersToastmastersClub",
+    href: clubConfig.social.facebook,
     color: "hover:bg-[#1877F2] hover:text-white",
   },
   {
     icon: Instagram,
     label: "Instagram",
-    href: "https://www.instagram.com/founderstoastmastersclub",
+    href: clubConfig.social.instagram,
     color:
       "hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] hover:text-white",
   },
@@ -134,7 +135,7 @@ export const Contact = () => {
               <Button variant="primary" className="w-full py-3 md:py-4 text-sm md:text-base lg:text-lg rounded-xl flex items-center justify-center gap-2">
                 <Mail size={16} />
                 <a
-                  href="mailto:founderstoastmastersclub@gmail.com?subject=Guest Visit Inquiry"
+                  href={`mailto:${clubConfig.contact.email}?subject=Guest Visit Inquiry`}
                   className="inline-block"
                 >
                   Email to Visit as Guest
@@ -151,7 +152,7 @@ export const Contact = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 shadow-soft border border-gray-100 text-center hover:shadow-card transition-shadow duration-300">
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-loyal-blue mb-1">90</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-loyal-blue mb-1">{clubConfig.meeting.duration}</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Minutes</div>
               </div>
             </div>

@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
+import { clubConfig } from "@/config/club";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,26 +28,26 @@ export const Footer = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Rooster Logic Pvt. Ltd.",
-      subvalue: "Gairidhara, Naxal, Kathmandu",
+      value: clubConfig.location.venue,
+      subvalue: clubConfig.location.fullAddress,
       color: "bg-loyal-blue/10 text-loyal-blue",
-      link: "https://maps.app.goo.gl/iZQYvNpjPX4ZdtAf6",
+      link: clubConfig.location.mapUrl,
     },
     {
       icon: Mail,
       label: "Email",
-      value: "founderstoastmastersclub@gmail.com",
+      value: clubConfig.contact.email,
       subvalue: "Drop us a message",
       color: "bg-happy-yellow/20 text-maroon",
-      link: "mailto:founderstoastmastersclub@gmail.com",
+      link: `mailto:${clubConfig.contact.email}`,
     },
     {
       icon: ExternalLink,
-      label: "Founders Toastmasters Club",
-      value: "District 41, Division C, Area 1 ",
-      subvalue: "Club No. 07246483",
+      label: clubConfig.name,
+      value: `District ${clubConfig.district}, Division ${clubConfig.division}, Area ${clubConfig.area}`,
+      subvalue: `Club No. ${clubConfig.clubNumber}`,
       color: "bg-maroon/10 text-maroon",
-      link: "https://www.toastmasters.org/find-a-club/07246483",
+      link: clubConfig.toastmastersUrl,
     },
   ];
 
@@ -54,13 +55,13 @@ export const Footer = () => {
     {
       icon: Facebook,
       label: "Facebook",
-      href: "https://www.facebook.com/FoundersToastmastersClub",
+      href: clubConfig.social.facebook,
       color: "hover:bg-[#1877F2] hover:text-white",
     },
     {
       icon: Instagram,
       label: "Instagram",
-      href: "https://www.instagram.com/founderstoastmastersclub",
+      href: clubConfig.social.instagram,
       color:
         "hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] hover:text-white",
     },
@@ -70,14 +71,13 @@ export const Footer = () => {
     <footer className="bg-gradient-to-b from-cool-grey/10 to-white border-t border-cool-grey/20">
       <div className="container-wide py-8">
         {/* Main Footer Content */}
-        <div className="grid lg:grid-cols-3 gap-12 mb-12">
+        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-1"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="relative">
@@ -92,17 +92,17 @@ export const Footer = () => {
               </div>
               <div>
                 <p className="font-bold text-xl text-foreground">
-                  Founders Toastmasters
+                  {clubConfig.shortName}
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Where Leaders Are Made
+                  {clubConfig.tagline}
                 </p>
               </div>
             </div>
 
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Building confident communicators and leaders in Kathmandu, Nepal.
-              A proud member of Toastmasters International, District 41.
+              Building confident communicators and leaders in {clubConfig.location.city}, {clubConfig.location.country}.
+              A proud member of Toastmasters International, District {clubConfig.district}.
             </p>
 
             {/* Social Links */}
@@ -133,6 +133,7 @@ export const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
+            className="lg:justify-self-center"
           >
             <h4 className="font-semibold text-lg text-foreground mb-6">
               Quick Links
@@ -219,14 +220,14 @@ export const Footer = () => {
             <div className="w-12 h-12 bg-loyal-blue/10 rounded-xl flex items-center justify-center mx-auto mb-2">
               <Users className="text-loyal-blue" size={24} />
             </div>
-            <div className="text-2xl font-bold text-loyal-blue">15+</div>
+            <div className="text-2xl font-bold text-loyal-blue">{clubConfig.stats.members}+</div>
             <div className="text-sm text-muted-foreground">Active Members</div>
           </div>
           <div className="text-center">
             <div className="w-12 h-12 bg-maroon/10 rounded-xl flex items-center justify-center mx-auto mb-2">
               <Mic className="text-maroon" size={24} />
             </div>
-            <div className="text-2xl font-bold text-maroon">200+</div>
+            <div className="text-2xl font-bold text-maroon">{clubConfig.stats.meetingsHeld}+</div>
             <div className="text-sm text-muted-foreground">
               Meetings Completed
             </div>
@@ -235,7 +236,7 @@ export const Footer = () => {
             <div className="w-12 h-12 bg-loyal-blue/10 rounded-xl flex items-center justify-center mx-auto mb-2">
               <Award className="text-loyal-blue" size={24} />
             </div>
-            <div className="text-2xl font-bold text-loyal-blue">5+</div>
+            <div className="text-2xl font-bold text-loyal-blue">{clubConfig.stats.yearsActive}+</div>
             <div className="text-sm text-muted-foreground">
               Years of Excellence
             </div>

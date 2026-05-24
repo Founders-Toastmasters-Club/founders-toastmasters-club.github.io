@@ -9,6 +9,7 @@ import {
   Mic2,
 } from "lucide-react";
 import groupMeetingImage from "@/assets/team-meeting-group.png";
+import { clubConfig } from "@/config/club";
 
 const values = [
   {
@@ -76,7 +77,7 @@ export const About = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-4">
             <Sparkles size={16} />
-            About Founders Toastmasters
+            About {clubConfig.shortName}
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Where Dreams Meet
@@ -84,7 +85,7 @@ export const About = () => {
             <span className="text-accent">Action</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Founded in 2019, we've been Nepal's premier platform for developing
+            Founded in {clubConfig.foundedYear}, we've been Nepal's premier platform for developing
             world-class communication and leadership skills through the proven
             Toastmasters methodology.
           </p>
@@ -125,7 +126,7 @@ export const About = () => {
               }}
               className="absolute -bottom-4 -right-4 bg-accent text-white px-3 py-1 rounded-xl shadow-card text-sm hidden sm:block"
             >
-              <p className="font-bold text-sm">5+ Years</p>
+              <p className="font-bold text-sm">{clubConfig.stats.yearsActive}+ Years</p>
               <p className="text-xs opacity-90">of Excellence</p>
             </motion.div>
           </motion.div>
@@ -140,9 +141,9 @@ export const About = () => {
           >
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground leading-relaxed">
-                Founders Toastmasters Club stands as Kathmandu's most dynamic
+                {clubConfig.name} stands as {clubConfig.location.city}'s most dynamic
                 community for personal and professional development. As proud
-                members of Toastmasters International District 41, we combine
+                members of Toastmasters International District {clubConfig.district}, we combine
                 time-tested methodologies with modern approaches to help you
                 excel in public speaking and leadership.
               </p>
@@ -159,19 +160,19 @@ export const About = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent">15+</div>
+                <div className="text-3xl font-bold text-accent">{clubConfig.stats.members}+</div>
                 <div className="text-sm text-muted-foreground">
                   Active Members
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent">200+</div>
+                <div className="text-3xl font-bold text-accent">{clubConfig.stats.meetingsHeld}+</div>
                 <div className="text-sm text-muted-foreground">
                   Meeting Completed
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent">8</div>
+                <div className="text-3xl font-bold text-accent">{clubConfig.stats.leadershipRoles}</div>
                 <div className="text-sm text-muted-foreground">
                   Leadership Roles
                 </div>
