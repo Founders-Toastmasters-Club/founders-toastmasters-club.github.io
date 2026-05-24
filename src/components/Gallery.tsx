@@ -100,7 +100,7 @@ export const Gallery = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Capturing
             <br />
-            <span className="text-maroon">Memorable Moments</span>
+            <span className="text-accent">Memorable Moments</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             From nervous first speeches to triumphant victories, every moment at

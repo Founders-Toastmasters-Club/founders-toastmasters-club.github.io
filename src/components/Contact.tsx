@@ -80,10 +80,10 @@ export const Contact = () => {
             <Send size={14} className="md:w-4 md:h-4" />
             Join Our Community
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Your Journey
-            <br className="hidden sm:block" />
-            <span className="text-maroon">Starts Here</span>
+            <br />
+            <span className="text-accent">Starts Here</span>
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
             Ready to transform your communication skills? Visit us as a guest

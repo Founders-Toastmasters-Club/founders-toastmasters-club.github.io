@@ -80,9 +80,9 @@ export const About = () => {
             About {clubConfig.shortName}
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Where Dreams Meet
+            Where Dreams
             <br />
-            <span className="text-accent">Action</span>
+            <span className="text-accent">Meet Action</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Founded in {clubConfig.foundedYear}, we've been Nepal's premier platform for developing
