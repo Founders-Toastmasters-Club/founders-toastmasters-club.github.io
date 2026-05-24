@@ -1,52 +1,80 @@
 import { motion } from "framer-motion";
-import { Camera, Heart, Users, Mic, Trophy } from "lucide-react";
+import { Camera, Heart, Users, Mic, Trophy, Star, PartyPopper } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-speaking.jpg";
-import groupMeetingImage from "@/assets/group-meeting.jpg";
-import tableTopicsImage from "@/assets/table-topics.jpg";
-import evaluationImage from "@/assets/evaluation.jpg";
-import leadershipImage from "@/assets/leadership.jpg";
+import milestone200Meeting from "@/assets/200th-meeting.jpeg";
+import groupPhoto from "@/assets/Group-photo.jpeg";
+import jointMeetingAIN from "@/assets/Joint-meeting-with-AIN.jpeg";
+import jointMeetingSagarmatha from "@/assets/Joint-meeting-with-Sagarmatha.jpeg";
+import maghiGroupPhoto from "@/assets/Maghi-group-photo.jpeg";
+import meetingGlimpses from "@/assets/Meeting-glimpses.jpeg";
+import tableTopicContest from "@/assets/Table-topic-contest-2026.jpeg";
 
 const galleryImages = [
+  // Row 1: 200th Meeting - Full width banner
   {
-    src: heroImage,
-    alt: "Dynamic speaking session",
-    title: "In Action",
-    desc: "Members delivering powerful presentations",
+    src: milestone200Meeting,
+    alt: "200th Meeting Celebration",
+    title: "200th Meeting",
+    desc: "A historic milestone celebration",
+    icon: Trophy,
+    span: "md:col-span-4",
+    aspect: "aspect-[21/9]",
+  },
+  // Row 2: Own club meetings - Community spans 2 rows, portrait images stacked
+  {
+    src: groupPhoto,
+    alt: "Group photo of members",
+    title: "Community",
+    desc: "Our vibrant Toastmasters family",
+    icon: Users,
+    span: "md:col-span-2 md:row-span-2",
+    aspect: "aspect-square",
+  },
+  {
+    src: maghiGroupPhoto,
+    alt: "Maghi festival celebration",
+    title: "Maghi Celebration",
+    desc: "Embracing culture and traditions",
+    icon: PartyPopper,
+    span: "md:col-span-2",
+    aspect: "aspect-[2/1]",
+  },
+  {
+    src: meetingGlimpses,
+    alt: "Meeting glimpses",
+    title: "Meeting Glimpses",
+    desc: "Moments from our regular sessions",
+    icon: Camera,
+    span: "md:col-span-2",
+    aspect: "aspect-[2/1]",
+  },
+  // Row 3: Joint meetings stacked on left, Contest independent on right
+  {
+    src: jointMeetingAIN,
+    alt: "Joint meeting with AIN Toastmasters",
+    title: "AIN Joint Meet",
+    desc: "Collaboration across clubs",
+    icon: Heart,
+    span: "md:col-span-2",
+    aspect: "aspect-[2/1]",
+  },
+  {
+    src: tableTopicContest,
+    alt: "Table Topic Contest 2026",
+    title: "Contest 2026",
+    desc: "Impromptu speaking at its finest",
     icon: Mic,
     span: "md:col-span-2 md:row-span-2",
+    aspect: "aspect-square",
   },
   {
-    src: groupMeetingImage,
-    alt: "Group celebration",
-    title: "Community",
-    desc: "Celebrating achievements together",
-    icon: Users,
-    span: "md:col-span-1 md:row-span-1",
-  },
-  {
-    src: tableTopicsImage,
-    alt: "Table Topics excitement",
-    title: "Impromptu",
-    desc: "Thinking on your feet",
-    icon: Heart,
-    span: "md:col-span-1 md:row-span-1",
-  },
-  {
-    src: evaluationImage,
-    alt: "Evaluation session",
-    title: "Growth",
-    desc: "Constructive feedback in action",
-    icon: Trophy,
-    span: "md:col-span-1 md:row-span-1",
-  },
-  {
-    src: leadershipImage,
-    alt: "Leadership meeting",
-    title: "Leadership",
-    desc: "Developing tomorrow's leaders",
-    icon: Camera,
-    span: "md:col-span-1 md:row-span-1",
+    src: jointMeetingSagarmatha,
+    alt: "Joint meeting with Sagarmatha Toastmasters",
+    title: "Sagarmatha Meet",
+    desc: "Building bridges together",
+    icon: Star,
+    span: "md:col-span-2",
+    aspect: "aspect-[2/1]",
   },
 ];
 
@@ -81,7 +109,7 @@ export const Gallery = () => {
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12 auto-rows-auto">
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}
@@ -91,7 +119,7 @@ export const Gallery = () => {
               transition={{ duration: 0.6, delay: 0.1 * index }}
               className={`group relative overflow-hidden rounded-3xl shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-2 ${image.span}`}
             >
-              <div className="aspect-square md:aspect-auto overflow-hidden">
+              <div className={`${image.aspect} overflow-hidden`}>
                 <img
                   src={image.src}
                   alt={image.alt}

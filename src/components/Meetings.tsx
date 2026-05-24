@@ -10,8 +10,8 @@ import {
   Target,
   Lightbulb,
 } from "lucide-react";
-import tableTopicsImage from "@/assets/table-topics.jpg";
-import evaluationImage from "@/assets/evaluation.jpg";
+import unleashArtist from "@/assets/Unleash-your-hidden-artist.jpeg";
+import lessNumberMeeting from "@/assets/Less-number-meeting-group-photo.jpeg";
 
 const meetingFlow = [
   {
@@ -182,8 +182,8 @@ export const Meetings = () => {
                 className="space-y-4"
               >
                 <img
-                  src={tableTopicsImage}
-                  alt="Table Topics session"
+                  src={unleashArtist}
+                  alt="Unleash your hidden artist event"
                   className="w-full h-48 object-cover rounded-2xl shadow-card"
                 />
                 <div className="bg-gradient-to-r from-happy-yellow to-happy-yellow/80 text-maroon p-4 rounded-2xl">
@@ -203,8 +203,8 @@ export const Meetings = () => {
                   <p className="text-sm opacity-90">Showcase your skills</p>
                 </div>
                 <img
-                  src={evaluationImage}
-                  alt="Evaluation session"
+                  src={lessNumberMeeting}
+                  alt="Intimate group meeting"
                   className="w-full h-48 object-cover rounded-2xl shadow-card"
                 />
               </motion.div>
