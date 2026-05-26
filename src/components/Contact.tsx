@@ -65,7 +65,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full py-20 md:py-24 lg:py-28 bg-gradient-to-b from-white to-cool-grey/5"
+      className="w-full md:py-24 lg:py-28 bg-gradient-to-b from-white to-cool-grey/5"
     >
       <div className="container-wide px-4 md:px-6 lg:px-8">
         {/* Header */}

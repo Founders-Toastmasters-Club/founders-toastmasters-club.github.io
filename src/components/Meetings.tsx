@@ -78,7 +78,7 @@ export const Meetings = () => {
   return (
     <section
       id="meetings"
-      className="w-full py-20 md:py-24 lg:py-28 bg-gradient-to-b from-white via-loyal-blue/5 to-cool-grey/5"
+      className="w-full md:py-24 lg:py-28 bg-gradient-to-b from-white via-loyal-blue/5 to-cool-grey/5"
     >
       <div className="container-wide">
         {/* Header */}

@@ -187,7 +187,7 @@ export const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="lg:mb-20"
         >
           <h3 className="text-3xl font-bold text-center text-foreground mb-12">
             What Makes Us Special
