@@ -25,12 +25,12 @@ export const clubConfig = {
 
   // Location
   location: {
-    venue: "Rooster Logic Pvt. Ltd.",
-    address: "Gairidhara, Kathmandu",
-    fullAddress: "Gairidhara, Naxal, Kathmandu",
+    venue: "Walnut Bistro - Restaurant in Kathmandu",
+    address: "Do-Cha Marga, Kathmandu",
+    fullAddress: "Do-Cha Marga, Kathmandu",
     city: "Kathmandu",
     country: "Nepal",
-    mapUrl: "https://maps.app.goo.gl/iZQYvNpjPX4ZdtAf6",
+    mapUrl: "https://maps.app.goo.gl/CfNCwBfyzQx9gpSP8",
   },
 
   // Stats (update these as they change)
