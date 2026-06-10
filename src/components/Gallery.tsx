@@ -28,7 +28,7 @@ const galleryImages = [
     desc: "Our vibrant Toastmasters family",
     icon: Users,
     span: "md:col-span-2 md:row-span-2",
-    aspect: "aspect-[4/3] md:aspect-square",
+    aspect: "aspect-[4/3] md:aspect-auto h-full",
   },
   {
     src: maghiGroupPhoto,
@@ -65,7 +65,7 @@ const galleryImages = [
     desc: "Impromptu speaking at its finest",
     icon: Mic,
     span: "md:col-span-2 md:row-span-2",
-    aspect: "aspect-[4/3] md:aspect-square",
+    aspect: "aspect-[4/3] md:aspect-auto h-full",
   },
   {
     src: jointMeetingSagarmatha,
