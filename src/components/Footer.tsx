@@ -279,12 +279,27 @@ export const Footer = () => {
           </div>
 
           {/* Disclaimer */}
-          <div className="text-center text-xs text-muted-foreground/70 max-w-4xl mx-auto">
+          <div className="text-center text-xs text-muted-foreground/70 max-w-4xl mx-auto mb-4">
             <p>
               The information on this website is for the sole use of
               Toastmasters' members, for Toastmasters business only. It is not
               to be used for solicitation and distribution of non-Toastmasters
               material or information.
+            </p>
+          </div>
+
+          {/* Designer Credit */}
+          <div className="text-center text-xs text-muted-foreground/60">
+            <p>
+              Designed & Built by{" "}
+              <a
+                href={clubConfig.designer.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-loyal-blue hover:text-loyal-blue/80 transition-colors duration-300 font-medium"
+              >
+                {clubConfig.designer.name}
+              </a>
             </p>
           </div>
         </motion.div>

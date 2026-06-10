@@ -53,6 +53,12 @@ export const clubConfig = {
     phone: "", // Add if needed
     guestFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeXfdYqIs8xPBoIKLhJF5vTxY_FYskLM0MVX4d6NTgMeKqiSQ/viewform",
   },
+
+  // Designer Credit
+  designer: {
+    name: "Bibek Jaiswal",
+    instagram: "https://www.instagram.com/bibek_jaiswal45",
+  },
 };
 
 // Helper formatters
