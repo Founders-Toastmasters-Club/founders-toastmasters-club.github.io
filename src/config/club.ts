@@ -51,6 +51,7 @@ export const clubConfig = {
   contact: {
     email: "founderstoastmastersclub@gmail.com",
     phone: "", // Add if needed
+    whatsapp: "https://wa.me/+9779865074749", // WhatsApp number in international format of VPM
     guestFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeXfdYqIs8xPBoIKLhJF5vTxY_FYskLM0MVX4d6NTgMeKqiSQ/viewform",
   },
 
