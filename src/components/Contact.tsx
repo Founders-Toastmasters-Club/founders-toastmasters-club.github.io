@@ -124,7 +124,6 @@ export const Contact = () => {
                   "Observe prepared speeches and evaluations",
                   "Optional Table Topics participation",
                   "Networking with like-minded professionals",
-                  "Free - no commitment required",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-loyal-blue rounded-full flex-shrink-0 mt-1.5"></div>
@@ -162,7 +161,7 @@ export const Contact = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-3 md:gap-4 mb-6">
               <div className="bg-white rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 shadow-soft border border-gray-100 text-center hover:shadow-card transition-shadow duration-300">
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-loyal-blue mb-1">0</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-loyal-blue mb-1">Rs.399</div>
                 <div className="text-xs md:text-sm text-muted-foreground">
                   Fee to Visit
                 </div>
