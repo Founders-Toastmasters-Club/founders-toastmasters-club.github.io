@@ -11,7 +11,7 @@ export const clubConfig = {
   // Toastmasters Organization
   clubNumber: "07246483",
   division: "C",
-  area: "C1",
+  area: "C2",
   district: 41,
   toastmastersUrl: "https://www.toastmasters.org/find-a-club/07246483",
 
