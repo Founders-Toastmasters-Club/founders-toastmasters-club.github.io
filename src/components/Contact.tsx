@@ -161,7 +161,7 @@ export const Contact = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-3 md:gap-4 mb-6">
               <div className="bg-white rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 shadow-soft border border-gray-100 text-center hover:shadow-card transition-shadow duration-300">
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-loyal-blue mb-1">Rs.399</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-loyal-blue mb-1">Rs.199</div>
                 <div className="text-xs md:text-sm text-muted-foreground">
                   Fee to Visit
                 </div>
